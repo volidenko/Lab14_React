@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import WriterList from './WriterList';
+import UserFormValidation from './UserFormWalidation';
+import UserForm from './UserForm';
+import UserFormWithRefs from './UserFormWithRefs';
+import FeedbackForm from './FeedbackForm';
 
 function App() {
+  let writers = [{ name: "Клиффорд", surname: "Саймак" }, { name: "Джордж", surname: "Оруэл" }, { name: "Джозеф", surname: "Хеллер" }];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <WriterList data={writers}></WriterList>
+      <hr />
+      <UserForm></UserForm>
+      <hr />
+      <UserFormWithRefs></UserFormWithRefs>
+      <hr />
+      <UserFormValidation></UserFormValidation>
+      <hr />
+      <FeedbackForm></FeedbackForm>
     </div>
   );
 }
